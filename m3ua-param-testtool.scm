@@ -37,21 +37,21 @@
 
 ;;; Define a transport address of the system under test
 (define sut-addr "127.0.0.1")
-(define sut-port   0)
-(define sut-port-1 0)
-(define sut-port-2 0)
+(define sut-port   m3ua-port)
+(define sut-port-1 m3ua-port)
+(define sut-port-2 m3ua-port)
 
 ;;; Define the transport address of the tester
-(define tester-addr "127.0.0.1")
-(define tester-port  m3ua-port)
+(define tester-addr "127.0.0.2")
+(define tester-port  3333)
 (define tester-port-1 3000)
 (define tester-port-2 3001)
 
 ;;; Define the point code of the IUT
-(define iut-pc 4001)
+(define iut-pc 1)
 
 ;;; Define the point code of the tester
-(define tester-pc 100)
+(define tester-pc 23)
 (define tester-pc-1 100)
 (define tester-pc-2 101)
 (define tester-invalid-pc 102)
@@ -79,7 +79,7 @@
 (define invalid-network-appearance 2)
 
 ;;; Define an routing context
-(define tester-rc-valid 1)
+(define tester-rc-valid 23)
 (define tester-rc-valid-1 1)
 (define tester-rc-valid-2 2)
 
@@ -124,7 +124,7 @@
 ;;;data-message-parameters
 
 ;;; Define parameter for DATA message
-(define rc  1)
+(define rc  23)
 (define opc 1)
 (define dpc 2)
 (define si  0)
