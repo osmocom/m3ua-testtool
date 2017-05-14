@@ -15,6 +15,6 @@ set testcases = (m3ua-sgp-aspsm-v-003 \
                  m3ua-sgp-asptm-o-001)
 
 foreach testcase ($testcases)
-  (runm3uatest -t $timeout $testcase > /dev/tty) >& /dev/null
+  (./runm3uatest -d . -t $timeout $testcase > /dev/tty) >& /dev/null
   sleep $sleeptime
 end
