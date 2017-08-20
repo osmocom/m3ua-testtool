@@ -51,6 +51,7 @@ def start_testcase(directory, testcase, timeout=0):
     before = time.time()
     my_env = os.environ
     my_env["GUILE_WARN_DEPRECATED"] = "no"
+    my_env["GUILE_AUTO_COMPILE"] = "0"
     p = Popen([GUILE, '-L', directory, '-c', cmd], env=my_env, stdout=PIPE, stderr=PIPE)
     try:
         (tc_stdout, tc_stderr) = p.communicate()
