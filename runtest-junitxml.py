@@ -49,7 +49,9 @@ def start_testcase(directory, testcase, timeout=0):
     signal.signal(signal.SIGALRM, signal_handler)
     signal.alarm(timeout)
     before = time.time()
-    p = Popen([GUILE, '-L', directory, '-c', cmd], stdout=PIPE, stderr=PIPE)
+    my_env = os.environ
+    my_env["GUILE_WARN_DEPRECATED"] = "no"
+    p = Popen([GUILE, '-L', directory, '-c', cmd], env=my_env, stdout=PIPE, stderr=PIPE)
     try:
         (tc_stdout, tc_stderr) = p.communicate()
         returncode = p.returncode
