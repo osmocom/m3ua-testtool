@@ -64,7 +64,7 @@ def parse_options():
     parser = OptionParser(usage="usage: %prog [options] test-case-list.txt")
     parser.add_option('-d', '--directory', dest='directory', metavar='DIR',
                     help='Directory where to look for .guile file',
-                    default="~")
+                    default=os.environ['HOME'])
     parser.add_option('-t', '--timeout', dest='timeout', metavar='TOUT',
                     help='Timeout for individual test case in sconds',
                     default=60, type='int')
