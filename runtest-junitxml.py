@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Alternative executor for m3ua tests suite by Michael Tuexen's nplab
 # (C) 2017 by Harald Welte <laforge@gnumonks.org>
@@ -97,4 +97,4 @@ for c in cases:
     time.sleep(options.sleep)
 
 ts = TestSuite(TEST, tcs)
-print(TestSuite.to_xml_string([ts]))
+print((TestSuite.to_xml_string([ts])))
